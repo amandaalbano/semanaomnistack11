@@ -14,7 +14,7 @@ export default function NovoCaso(){
     const ongId = localStorage.getItem('ongId');
     const history = useHistory();
     async function handleNovoCaso(e){
-        //teste
+        
         e.preventDefault();
 
         const data ={
