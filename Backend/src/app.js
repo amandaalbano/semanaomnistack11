@@ -1,4 +1,5 @@
 const express = require('express');
+const {errors} = require('celebrate');
 const cors = require('cors');
 const routes = require('./routes');
 
@@ -8,6 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
+
+module.exports = app;
 
 /**
  * Rota/Recurso
@@ -42,4 +46,4 @@ app.use(routes);
 
 //a aplicação vai ouvir a porta 3333. Assim, quando acessar localhost:3333 no navegador
 //acessarei a aplicação.
-app.listen(3333);
+//app.listen(3333);
